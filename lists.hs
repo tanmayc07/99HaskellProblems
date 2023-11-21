@@ -21,3 +21,8 @@ elementAt (x:xs) n
  | n==0 = error "Provide a valid position value"
  | n==1 = x
  | otherwise = elementAt xs (n-1)
+
+-- Q4: Find the number of elements in a list
+myLength :: [a] -> Int
+myLength [] = 0
+myLength (x:xs) = 1 + myLength xs
