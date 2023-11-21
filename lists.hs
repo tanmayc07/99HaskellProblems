@@ -12,3 +12,12 @@ myButLast [x] = error "Only One Element in the List Passed!"
 myButLast (x:xs)
  | length xs == 1 = x
  | otherwise = myButLast xs
+
+-- Q3: Find the K'th element of a list
+elementAt :: [a] -> Int -> a
+elementAt [] _ = error "Empty List Passed"
+elementAt (x:xs) n
+ | n>length (x:xs) = error "Not enough elements in the list"
+ | n==0 = error "Provide a valid position value"
+ | n==1 = x
+ | otherwise = elementAt xs (n-1)
