@@ -26,3 +26,8 @@ elementAt (x:xs) n
 myLength :: [a] -> Int
 myLength [] = 0
 myLength (x:xs) = 1 + myLength xs
+
+-- Q5: Reverse a list
+myReverse :: [a] -> [a]
+myReverse [] = []
+myReverse (x:xs) = myReverse xs ++ [x]
